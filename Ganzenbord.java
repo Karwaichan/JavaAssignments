@@ -19,7 +19,6 @@ public class Ganzenbord {
 			System.out.println("");
 			String invoer = scanner.next();
 			if(invoer.equals("q")) {
-				System.out.println("q werkt");
 				break;
 			}
 			
@@ -44,7 +43,7 @@ public class Ganzenbord {
 				if(spelerWaarde > 63) {
 				
 					spelerWaarde = 63-getal;
-					System.out.println("Je hebt teveel gegooid voor de winst, je wordt teruggezet naar vak"+spelerWaarde);
+					System.out.println("Je hebt teveel gegooid voor de winst, je wordt teruggezet naar vak "+spelerWaarde);
 					
 				}else {
 				System.out.println("Je staat op vakje " +spelerWaarde);
