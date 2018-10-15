@@ -11,8 +11,7 @@ public class Ganzenbord {
 		
 		
 		int spelerWaarde = 0;
-		
-		
+				
 		while(true) {
 			System.out.println("Wat wilt u nu doen?");
 			System.out.println("");
@@ -45,7 +44,7 @@ public class Ganzenbord {
 				if(spelerWaarde > 63) {
 				
 					spelerWaarde = 63-getal;
-					System.out.println("Je hebt teveel gegooid voor de winst, je wordt teruggezet naar "+spelerWaarde);
+					System.out.println("Je hebt teveel gegooid voor de winst, je wordt teruggezet naar vak"+spelerWaarde);
 					
 				}else {
 				System.out.println("Je staat op vakje " +spelerWaarde);
