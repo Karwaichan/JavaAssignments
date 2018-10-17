@@ -1,23 +1,37 @@
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Ganzenbord {
 
 	public static void main (String [] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Welkom bij het spel ganzenborden\n Geef je naam op:");
-		String speler1 = scanner.next();
-		System.out.println(speler1);
+		ArrayList<String> namen = new ArrayList<String>();
 		
+		Scanner reader = new Scanner(System.in);
+		
+		System.out.println("Welkom bij het spel ganzenbord.\nGeef het aantal spelers?");
+		int spelers = Integer.parseInt(reader.nextLine());
+		
+		int x = 0;
+		while(x<spelers) {
+			System.out.println("wat is de naam van speler" +(x+1));
+			String naam = reader.next();
+			namen.add(naam);
+			x++;
+		}
+		System.out.println("welkom:");
+		for(String i: namen) {
+			System.out.println(i);
+		}
 		
 		int spelerWaarde = 0;
-				
+		
 		while(true) {
 			System.out.println("Wat wilt u nu doen?");
 			System.out.println("");
 			System.out.println("g is dobbelsteen gooien q stoppen");
 			System.out.println("");
-			String invoer = scanner.next();
+			String invoer = reader.next();
 			if(invoer.equals("q")) {
 				break;
 			}
@@ -36,7 +50,7 @@ public class Ganzenbord {
 				}
 				if(spelerWaarde == 63) {
 					System.out.println("Je staat op vakje " +spelerWaarde);
-					System.out.println("Gefeliciteerd! "+speler1);
+					System.out.println("Gefeliciteerd! "+namen.get(0));
 					System.out.println("Je hebt het spel gewonnen");
 					break;
 				}
@@ -65,5 +79,6 @@ public class Ganzenbord {
 		
 		}
 		System.out.println("Bedankt voor het spelen");
+		
 	}
 }
